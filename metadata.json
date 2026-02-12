@@ -1,0 +1,7 @@
+{
+  "name": "03 A sua Abençoada Quaresma ",
+  "description": "Um aplicativo devocional para acompanhar os 40 dias da Quaresma com reflexões personalizadas, orações e propósitos diários guiados por IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
