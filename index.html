@@ -13,18 +13,12 @@
         margin: 0;
         overflow-x: hidden;
         min-height: 100vh;
+        background-color: #fcfcfc;
       }
       h1, h2, h3 {
         font-family: 'Crimson Pro', serif;
       }
 
-      /* Otimização de Imagens */
-      img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-      }
-
-      /* Sombras de Texto Personalizadas */
       .text-shadow-elegant {
         text-shadow: 2px 2px 0px rgba(168, 85, 247, 0.2), 4px 4px 15px rgba(0, 0, 0, 0.1);
       }
@@ -33,19 +27,9 @@
         text-shadow: 0 0 20px rgba(234, 179, 8, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.8);
       }
 
-      /* Animação de Nuvens */
       @keyframes moveClouds {
         0% { transform: translateX(-10%); }
         100% { transform: translateX(10%); }
-      }
-
-      @keyframes pulseSlow {
-        0%, 100% { opacity: 0.8; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.02); }
-      }
-
-      .animate-pulse-slow {
-        animation: pulseSlow 4s ease-in-out infinite;
       }
 
       .cloud-layer {
@@ -61,39 +45,11 @@
         animation: moveClouds 60s linear infinite alternate;
       }
 
-      .divine-light {
-        position: fixed;
-        top: -10%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 150vw;
-        height: 150vh;
-        background: radial-gradient(circle at top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-        pointer-events: none;
-        z-index: -1;
-      }
-
       .celestial-bg {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), url('https://i.imgur.com/xUu8Cen.png');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 245, 0.5) 100%);
         min-height: 100vh;
       }
 
-      .text-protection-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 40vh;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      /* Ajuste de scrollbar para modal */
       .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
       }
@@ -119,9 +75,9 @@
 </head>
   <body class="text-stone-900">
     <div class="celestial-bg">
-      <div class="text-protection-overlay"></div>
       <div class="cloud-layer"></div>
       <div id="root"></div>
     </div>
+    <!-- O sistema importa o index.tsx automaticamente como módulo -->
   </body>
 </html>
